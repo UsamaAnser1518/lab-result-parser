@@ -1,0 +1,20 @@
+<div class="w-full h-[20rem] flex flex-col justify-center items-center">
+  <div class="w-[40rem] h-72 relative bg-white rounded-lg shadow">
+    <%= form_with url: results_path, local: true, multipart: true do |form| %>
+      <div class="left-[23px] top-[30px] absolute text-black text-xl font-medium font-['Inter'] leading-normal">Upload File</div>
+      <div class="left-[539px] top-[235px] absolute justify-start items-start inline-flex">
+        <div class="px-4 py-2 bg-neutral-300 rounded-sm justify-center items-center gap-2 flex">
+          <%= form.submit "Submit", class: "text-white text-base font-medium font-['Inter'] leading-normal" %>
+        </div>
+      </div>
+      <div class="h-20 left-[23px] top-[88px] absolute flex-col justify-start items-start gap-1 inline-flex">
+        <div class="text-zinc-800 text-base font-bold font-['Inter'] leading-normal">*File</div>
+        <div class="self-stretch p-2 rounded-lg border border-neutral-300 justify-start items-center gap-2 inline-flex w-[37rem]">
+          <div class="px-2 py-1 justify-center items-center gap-2 flex">
+            <%= form.file_field :file, class: "text-zinc-800 text-base font-normal font-['Inter'] leading-normal w-[35-rem]" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
